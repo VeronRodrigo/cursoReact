@@ -1,7 +1,11 @@
-const ItemList = ({ greeting }) => {
+import './ItemList.css';
+import Item from '../Item/Item';
+
+
+const ItemList = ({products}) => {
     return (
-        <div>
-            <h1> {greeting}</h1>
+        <div className='List'>
+            {products.map (prod => <Item key={prod.id} {...prod} />)}
         </div>
     )
 }
